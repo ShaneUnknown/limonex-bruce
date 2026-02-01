@@ -1,9 +1,11 @@
 :root {
   --list-p-color: #131f2a; 
+  --bg-empty: #103356;
 }
 @media (prefers-color-scheme: light) {
   :root {
     --list-p-color: #fffe;
+    --bg-empty: #dde8f2;
   }
 }
 
@@ -135,7 +137,7 @@
 }
 .DefaultList .empty {
   font-size: 1.5rem;
-  background-color: #103356;
+  background-color: var(--bg-empty);
   border-radius: .5rem;
   padding: 1rem;
   text-align: center;
