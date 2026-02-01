@@ -1,0 +1,33 @@
+.CategoryBar {
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  padding-left: .5rem;
+  margin-top: 1rem;
+}
+.CategoryBar .cont {
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  background-color: #0092ef;
+  margin-right: .5rem;
+  position: relative;
+}
+.CategoryBar .cont::before {
+  content: '';
+  position: absolute;
+  background-color: #0003;
+  width: 95%;
+  height: 1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: .15rem;
+  border-radius: .4rem;
+}
+.CategoryBar h2 {
+  position: relative;
+  z-index: 1;
+  font-size: .9rem;
+  color: white;
+  text-transform: uppercase;
+}

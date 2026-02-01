@@ -1,0 +1,43 @@
+:root {
+  --searchbar-bg: #1d4370;
+  --searchbar-txt-color: #e1e6ed;
+  --searchbar-img-opac: 1;
+  --searchbar-ph-color: #658ab6;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --searchbar-bg: #e2e6ed;
+    --searchbar-txt-color: #212121;
+    --searchbar-img-opac: .7;
+    --searchbar-ph-color: #80a4cd;
+  }
+}
+
+.SearchBar {
+  padding: 0 .5rem;
+  margin-bottom: 1.5rem;
+}
+.SearchBar .cont {
+  background-color: var(--searchbar-bg);
+  border-radius: .5rem;
+  display: flex;
+}
+.SearchBar img {
+  width: 1.3rem;
+  padding-left: .5rem;
+  opacity: var(--searchbar-img-opac);
+}
+.SearchBar input {
+  outline: 0;
+  border: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: .8rem .5rem;
+  color: var(--searchbar-txt-color);
+  font-size: 1.3rem;
+  font-family: 'Montserrat', Sans-Serif;
+}
+.SearchBar input::placeholder {
+  color: var(--searchbar-ph-color);
+}

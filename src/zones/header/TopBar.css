@@ -1,0 +1,57 @@
+:root {
+  --topbar-img-stroke: .3rem;
+  --topbar-txt-stroke: .25rem;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --topbar-img-stroke: .4rem;
+    --topbar-txt-stroke: .3rem;
+  }
+}
+
+.TopBar {
+  padding: 1rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.TopBar img {
+  object-fit: cover;
+  width: 10rem;
+  height: 5rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  border: var(--topbar-img-stroke) solid #fffe;
+  box-shadow: .2rem .2rem .5rem #0003;
+}
+.TopBar .cont {
+  background-color: #00880b;
+  color: #fffe;
+  border-radius: 5rem;
+  padding: .2rem .7rem;
+  border: var(--topbar-txt-stroke) solid #fff;
+  box-shadow: .2rem .2rem .5rem #0003;
+  max-width: 90%;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.TopBar .cont::before {
+  content: '';
+  position: absolute;
+  width: 96%;
+  height: .8rem;
+  background-color: #0003;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: .2rem;
+  border-radius: 3rem;
+}
+
+.TopBar h1 {
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 1;
+}

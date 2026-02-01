@@ -1,0 +1,145 @@
+:root {
+  --list-p-color: #131f2a; 
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --list-p-color: #fffe;
+  }
+}
+
+.DefaultList {
+  display: flex;
+  flex-direction: column;
+}
+.DefaultList .category {
+  background-color: #02a524;
+  display: flex;
+  gap: .5rem;
+  padding: .3rem .8rem;
+  border-radius: 3rem;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+  position: relative;
+  align-self: center;
+  box-shadow: .15rem .15rem .3rem #0003;
+}
+.DefaultList .category::before {
+  content: '';
+  position: absolute;
+  background-color: #0003;
+  width: 92%;
+  height: 1.3rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: .15rem;
+  border-radius: 1rem;
+}
+.DefaultList .category::after {
+  content: '';
+  position: absolute;
+  background-color: #fff5;
+  width: 50%;
+  height: .3rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: .15rem;
+  border-radius: 1rem;
+}
+.DefaultList .category img {
+  width: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.DefaultList .category img:nth-child(3) {
+  transform: scaleX(-1);
+}
+.DefaultList h2 {
+  color: #fffe;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-family: 'Lilita One', Sans-Serif;
+  font-weight: 300;
+  position: relative;
+  z-index: 1;
+  text-shadow: .15rem .15rem .3rem #0003;
+}
+
+.DefaultList .item {
+  margin: .5rem;
+  border-radius: .5rem;
+  margin-bottom: .5rem;
+}
+.DefaultList .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .3rem .4rem;
+  padding-bottom: .5rem;
+  position: relative;
+}
+.DefaultList .title::before {
+  content: '';
+  position: absolute;
+  background-color: #0003;
+  width: 100%;
+  height: 40%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: .15rem;
+  border-radius: .5rem .5rem .3rem .3rem;
+}
+.DefaultList .title::after {
+  content: '';
+  position: absolute;
+  background-color: #fff4;
+  width: 50%;
+  height: .5rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: .15rem;
+  border-radius: .5rem;
+}
+.DefaultList .item h3 {
+  font-size: 1.4rem;
+  margin-right: .5rem;
+  color: #fffe;
+  text-shadow: .2rem .2rem .3rem #0003;
+  font-family: 'Lilita One', Sans-Serif;
+  font-weight: 300;
+  position: relative;
+  z-index: 1;
+}
+.DefaultList .item h4 {
+  font-size: 1.2rem;
+  padding: .3rem .5rem;
+  min-width: 4.5rem;
+  text-align: center;
+  background-color: #fffc;
+  border-radius: 1rem;
+  color: #000;
+  font-family: 'Lilita One', Sans-Serif;
+  font-weight: 300;
+  position: relative;
+  z-index: 1;
+}
+.DefaultList .item p {
+  margin: 0;
+  border-radius: 0 0 .5rem .5rem;
+  padding: .5rem;
+  font-size: 1.1rem;
+  background-color: var(--list-p-color);
+}
+.DefaultList .empty {
+  font-size: 1.5rem;
+  background-color: #103356;
+  border-radius: .5rem;
+  padding: 1rem;
+  text-align: center;
+  width: 80%;
+  margin-top: 1rem;
+  align-self: center;
+}

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat&display=swap');
+
+:root {
+  --bg-color: #131f2a;
+  --color: #ffffff;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--color);
+  font-family: 'Montserrat', Sans-Serif;
+  max-width: 450px;
+  min-height: 100vh;
+  user-select: none;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color: #131f2a;
+    --bg-color: #ffffff;
+  }
+}
