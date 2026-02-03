@@ -20,10 +20,13 @@
   padding: .3rem .8rem;
   border-radius: 3rem;
   margin-top: 2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
   position: relative;
   align-self: center;
   box-shadow: .15rem .15rem .3rem #0003;
+}
+.DefaultList .category:nth-child(1) {
+  margin-top: 1rem;
 }
 .DefaultList .category::before {
   content: '';
@@ -71,7 +74,7 @@
 .DefaultList .item {
   margin: .5rem;
   border-radius: .5rem;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
 }
 .DefaultList .title {
   display: flex;

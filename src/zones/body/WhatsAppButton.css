@@ -1,0 +1,9 @@
+.WhatsAppButton {
+  position: fixed;
+  bottom: 4rem;
+  right: 1rem;
+  z-index: 10;
+}
+.WhatsAppButton img {
+  width: 4rem;
+}

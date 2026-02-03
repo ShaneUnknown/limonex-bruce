@@ -6,7 +6,7 @@ const TopBar = () => {
     <div className="TopBar">
       <img src={logoLimonex} />
       <div class='cont'>
-        <h1>Emolientes clásicos y medicinales</h1>
+        <h1>Emolientes Clásicos y Medicinales</h1>
       </div>
     </div>
   )

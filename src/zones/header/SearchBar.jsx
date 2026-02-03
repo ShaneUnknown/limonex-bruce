@@ -26,7 +26,7 @@ const SearchBar = () => {
       onclick={goToSearch}>
       <div class='cont'>
         <img src={searchIcon} />
-        <input type="text" placeholder="Buscar emoliente" value={searchtext} onInput={handleChange}/>
+        <input type="text" placeholder="Buscar emoliente o planta" value={searchtext} onInput={handleChange}/>
       </div>
     </div>
   )

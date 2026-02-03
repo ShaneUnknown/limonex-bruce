@@ -23,12 +23,12 @@
   height: 5rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
-  border: var(--topbar-img-stroke) solid #fffe;
+  border: var(--topbar-img-stroke) solid #fff;
   box-shadow: .2rem .2rem .5rem #0003;
 }
 .TopBar .cont {
   background-color: #00880b;
-  color: #fffe;
+  background-image: linear-gradient(#009e0d, #004f06);
   border-radius: 5rem;
   padding: .2rem .7rem;
   border: var(--topbar-txt-stroke) solid #fff;
@@ -37,6 +37,7 @@
   margin-bottom: 1rem;
   position: relative;
 }
+/*
 .TopBar .cont::before {
   content: '';
   position: absolute;
@@ -49,9 +50,13 @@
   bottom: .2rem;
   border-radius: 3rem;
 }
-
+*/
 .TopBar h1 {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   position: relative;
   z-index: 1;
+  font-family: 'Lilita One', Sans-Serif;
+  color: white;
+  font-weight: 300;
+  width: 100%;
 }

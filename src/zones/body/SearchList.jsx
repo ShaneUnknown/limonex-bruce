@@ -12,7 +12,8 @@ const SearchList = () => {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
 
-  const busqueda = EMOLIENTES.filter(emo => normalizeText(emo.name).includes(normalizeText(searchtext)))
+  const busqueda = EMOLIENTES.filter(emol => normalizeText(emol.name).includes(normalizeText(searchtext)) || normalizeText(emol.content).includes(normalizeText(searchtext)))
+
   
   const CategoryItem = (text) => {
     return (

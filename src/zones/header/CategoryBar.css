@@ -1,16 +1,30 @@
+.CategoryRef {
+  width: 1rem;
+  height: .1rem;
+}
 .CategoryBar {
+  z-index: 3;
+  position: sticky;
+  top: 0;
   display: flex;
   overflow-x: scroll;
   scrollbar-width: none;
-  padding-left: .5rem;
-  margin-top: 1rem;
+  padding: 1rem 0 1rem .5rem;
+  background-color: var(--bg-color);
 }
 .CategoryBar .cont {
   padding: .5rem 1rem;
   border-radius: .5rem;
   background-color: #0092ef;
-  margin-right: .5rem;
+  margin-right: .3rem;
   position: relative;
+  opacity: .6;
+  transform: scale(.95);
+  transition: .3s transform;
+}
+.CategoryBar .cont.selected {
+  opacity: 1;
+  transform: scale(1);
 }
 .CategoryBar .cont::before {
   content: '';
@@ -27,7 +41,9 @@
 .CategoryBar h2 {
   position: relative;
   z-index: 1;
-  font-size: .9rem;
+  font-family: 'Lilita One', Sans-Serif;
+  font-size: 1.1rem;
+  font-weight: 300;
   color: white;
   text-transform: uppercase;
 }

@@ -2,6 +2,8 @@ import TopBar from "./zones/header/TopBar"
 import SearchBar from "./zones/header/SearchBar"
 import CategoryBar from "./zones/header/CategoryBar"
 import ListBody from "./zones/body/ListBody"
+import WhatsAppButton from "./zones/body/WhatsAppButton"
+import Footer from "./zones/footer/Footer"
 
 import  './App.css'
 
@@ -14,6 +16,8 @@ const App = () => {
       <SearchBar />
       <CategoryBar />
       <ListBody />
+      <Footer />
+      <WhatsAppButton />
     </div>
   )
 }

@@ -15,9 +15,11 @@ export const useMain = () => {
 
 const MainProvider = ({ children }) => {
   const [searchtext, setSearchText] = useState('')
+  const [activeCategory, setActiveCategory] = useState('TODO')
   
   const values = {
-    searchtext, setSearchText
+    searchtext, setSearchText,
+    activeCategory, setActiveCategory,
   }
 
   return (

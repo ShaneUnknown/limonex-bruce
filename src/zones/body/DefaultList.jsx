@@ -1,63 +1,69 @@
 import EMOLIENTES from '../../db/emolientes'
 import { CATEGORY } from '../../utils/constants'
-import { createRef } from "preact";
+import { createRef } from 'preact'
 import leaf from '../../assets/leaf.svg'
-import  './DefaultList.css'
+import { useMain } from "../../context/MainContext"
+import './DefaultList.css'
 
-export const classicRef = createRef(null);
-export const specialRef = createRef(null);
-export const medicinalRef = createRef(null);
+export const popularRef = createRef()
+export const classicRef = createRef()
+export const specialRef = createRef()
+export const medicinalRef = createRef()
+
+const CATEGORIES_CONFIG = [
+  { key: CATEGORY.POPULAR, title: 'Lo Más Vendido', ref: popularRef },
+  { key: CATEGORY.CLASSIC, title: `Emolientes ${CATEGORY.CLASSIC}`, ref: classicRef },
+  { key: CATEGORY.SPECIAL, title: `Emolientes ${CATEGORY.SPECIAL}`, ref: specialRef },
+  { key: CATEGORY.MEDICINAL, title: `Emolientes ${CATEGORY.MEDICINAL}`, ref: medicinalRef }
+]
+
+const CategoryItem = ({ text }) => (
+  <div class="category">
+    <img src={leaf} />
+    <h2>{text}</h2>
+    <img src={leaf} />
+  </div>
+)
+
+const CategoryEmol = ({ emols }) => (
+  emols.map(emol => (
+    <div
+      key={emol.id ?? emol.name}
+      class="item"
+      style={{
+        backgroundColor: emol.color,
+        boxShadow: `0 0 0 .15rem ${emol.color}`
+      }}
+    >
+      <div class="title">
+        <h3>{emol.name}</h3>
+        <h4>S/. {emol.price}</h4>
+      </div>
+      <p>{emol.content}</p>
+    </div>
+  ))
+)
+
+
 
 const DefaultList = () => {
-
-  const populares = EMOLIENTES.filter(emo => emo.category.includes(CATEGORY.POPULAR))
   
-  const clasicos = EMOLIENTES.filter(emo => emo.category.includes(CATEGORY.CLASSIC))
+  const { activeCategory } = useMain()
   
-  const especiales = EMOLIENTES.filter(emo => emo.category.includes(CATEGORY.SPECIAL))
-  
-  const medicinales = EMOLIENTES.filter(emo => emo.category.includes(CATEGORY.MEDICINAL))
-  
-  const CategoryItem = (text, ref) => {
-    return (
-      <div ref={ref} class='category'>
-        <img src={leaf} />
-        <h2>{text}</h2>
-        <img src={leaf} />
-      </div>
-    )
-  }
-  
-  const CategoryEmol = (emols) => {
-    return emols.map(emol =>
-      <div class='item' 
-        style={{ backgroundColor: emol.color, boxShadow: `0 0 0 .15rem ${emol.color}` }}>
-        <div class='title'>
-          <h3>{emol.name}</h3>
-          <h4>
-            S/. {emol.price}
-          </h4>
-        </div>
-        <p>{emol.content}</p>
-      </div>
-    )
-  }
+  const visibleCategories = activeCategory === 'TODO' ? CATEGORIES_CONFIG : CATEGORIES_CONFIG.filter(cat => cat.key === activeCategory)
   
   return (
-    <div className='DefaultList'>
-    
-    {CategoryItem('Lo Más Vendido')}
-    {CategoryEmol(populares)}
-    
-    {CategoryItem(`Emolientes ${CATEGORY.CLASSIC}`, classicRef)}
-    {CategoryEmol(clasicos)}
-    
-    {CategoryItem(`Emolientes ${CATEGORY.SPECIAL}`, specialRef)}
-    {CategoryEmol(especiales)}
-    
-    {CategoryItem(`Emolientes ${CATEGORY.MEDICINAL}`, medicinalRef)}
-    {CategoryEmol(medicinales)}
-    
+    <div className="DefaultList">
+    {visibleCategories.map(({ key, title, ref }) => {
+      const emols = EMOLIENTES.filter(e => 
+          e.category.includes(key))
+      return (
+        <>
+        <CategoryItem text={title}/>
+        <CategoryEmol emols={emols} />
+        </>
+      )
+    })}
     </div>
   )
 }
