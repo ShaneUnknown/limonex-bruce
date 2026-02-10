@@ -1,5 +1,5 @@
 export const CATEGORY = {
-  POPULAR: 'Populares',
+  ALL: 'Todos',
   CLASSIC: 'Clásicos',
   SPECIAL: 'Especiales',
   MEDICINAL: 'Medicinales',

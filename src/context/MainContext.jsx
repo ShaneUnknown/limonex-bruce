@@ -1,5 +1,6 @@
 import { createContext } from "preact"
 import { useContext, useState } from "preact/hooks"
+import { CATEGORY } from '../utils/constants'
 
 const MainContext = createContext(null)
 
@@ -15,7 +16,7 @@ export const useMain = () => {
 
 const MainProvider = ({ children }) => {
   const [searchtext, setSearchText] = useState('')
-  const [activeCategory, setActiveCategory] = useState('TODO')
+  const [activeCategory, setActiveCategory] = useState(CATEGORY.ALL)
   
   const values = {
     searchtext, setSearchText,

@@ -3,10 +3,13 @@ import  './TopBar.css'
 
 const TopBar = () => {
   return (
-    <div className="TopBar">
+    <div class="TopBar">
       <img src={logoLimonex} />
       <div class='cont'>
-        <h1>Emolientes Clásicos y Medicinales</h1>
+        <div class='marquee-track'>
+          <h1>Emolientes Clásicos, Especiales y Medicinales.</h1>
+          <h1>Emolientes Clásicos, Especiales y Medicinales.</h1>
+        </div>
       </div>
     </div>
   )

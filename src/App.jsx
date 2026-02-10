@@ -7,8 +7,6 @@ import Footer from "./zones/footer/Footer"
 
 import  './App.css'
 
-
-
 const App = () => {
   return (
     <div className="App">

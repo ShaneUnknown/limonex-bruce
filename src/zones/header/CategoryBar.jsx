@@ -1,6 +1,5 @@
 import { CATEGORY } from "../../utils/constants"
 import { vibration } from "../../utils/utils"
-import { popularRef, classicRef, specialRef, medicinalRef } from "../body/DefaultList"
 import { useMain } from "../../context/MainContext"
 import { useState, useRef } from "preact/hooks"
 import  './CategoryBar.css'
@@ -32,20 +31,16 @@ const CategoryBar = () => {
   
   const categories = [
     {
-      name: 'TODO',
-      ref: popularRef
+      name: CATEGORY.ALL,
     },
     {
       name: CATEGORY.CLASSIC,
-      ref: classicRef
     },
     {
       name: CATEGORY.SPECIAL,
-      ref: specialRef
     },
     {
       name: CATEGORY.MEDICINAL,
-      ref: medicinalRef
     },
   ]
   
