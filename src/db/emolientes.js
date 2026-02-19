@@ -67,7 +67,7 @@ const EMOLIENTES = [
   {
     name: 'Maca Con Leche + 12 Semillas',
     content: '',
-    price: '5.00',
+    price: '6.00',
     color: COLOR.SKY,
     category: [CATEGORY.SPECIAL],
   },
