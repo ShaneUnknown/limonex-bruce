@@ -1,6 +1,7 @@
 import { CATEGORY, COLOR } from "../utils/constants"
 
 const EMOLIENTES = [
+  /*
   {
     name: 'Cebada',
     content: 'Cebada, dulce y limón al gusto. (Pídela caliente, fría o helada).',
@@ -8,6 +9,7 @@ const EMOLIENTES = [
     color: COLOR.BROWN,
     category: [CATEGORY.CLASSIC],
   },
+  */
   {
     name: 'Linaza',
     content: 'Linaza, cebada, boldo, alfalfa(opcional), dulce y limón al gusto.',
@@ -20,7 +22,7 @@ const EMOLIENTES = [
     content: 'Tuna, linaza, cebada, uña de gato, boldo, alfalfa(opcional), dulce y limón al gusto.',
     price: '4.00',
     color: COLOR.TEAL,
-    category: [CATEGORY.CLASSIC, CATEGORY.POPULAR],
+    category: [CATEGORY.CLASSIC],
   },
   {
     name: 'Sábila',
@@ -33,7 +35,7 @@ const EMOLIENTES = [
     name: 'Emo Café',
     content: 'Emoliente clásico + café.',
     price: '5.00',
-    color: COLOR.BROWN,
+    color: COLOR.PURPLE,
     category: [CATEGORY.CLASSIC],
   },
   {
@@ -59,10 +61,10 @@ const EMOLIENTES = [
   },
   {
     name: 'Proteínas',
-    content: 'Nutrisure, creatina, maca negra y 12 semillas.',
-    price: '12.00',
+    content: 'Nutrisure, maca negra y 12 semillas.',
+    price: '10.00',
     color: COLOR.GOLD,
-    category: [CATEGORY.SPECIAL],
+    category: [CATEGORY.SPECIAL, CATEGORY.POPULAR],
   },
   {
     name: 'Maca Con Leche + 12 Semillas',
@@ -83,14 +85,14 @@ const EMOLIENTES = [
     content: 'Cardo mariano, alcachofa, sábila y boldo.',
     price: '6.00',
     color: COLOR.PURPLE,
-    category: [CATEGORY.MEDICINAL],
+    category: [CATEGORY.MEDICINAL, CATEGORY.POPULAR],
   },
   {
     name: 'Gastritis',
     content: 'Tocosh, sábila, uña de gato y sangre de grado.',
     price: '6.00',
     color: COLOR.TEAL,
-    category: [CATEGORY.MEDICINAL],
+    category: [CATEGORY.MEDICINAL, CATEGORY.POPULAR],
   },
   {
     name: 'Diabetes',
@@ -117,7 +119,7 @@ const EMOLIENTES = [
     name: 'Detox',
     content: 'Clorofila, spirulina, sábila y tuna.',
     price: '7.00',
-    color: COLOR.BROWN,
+    color: COLOR.TEAL,
     category: [CATEGORY.MEDICINAL],
   },
   {
@@ -187,7 +189,7 @@ const EMOLIENTES = [
     name: 'Purgante',
     content: '(Preparación de 15 a 20 minutos).',
     price: '10.00',
-    color: COLOR.BROWN,
+    color: COLOR.TEAL,
     category: [CATEGORY.MEDICINAL],
   },
 ]

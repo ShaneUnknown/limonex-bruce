@@ -18,14 +18,14 @@ const Footer = () => {
       <h3>
         <span>Mañanas:</span>
         Lunes a Sábado <br/>
-        6 am. a 10 am. <br/>
+        6:30 am. a 11:00 am. <br/>
         <br/>
         <span>Tardes:</span>
         Lunes a Sábado <br/>
-        5:30 pm. a 9 pm. <br/>
+        5:00 pm. a 9:00 pm. <br/>
         <br/>
         <span>Domingos</span>
-        5:30 pm. a 9 pm. <br/>
+        5:30 pm. a 9:00 pm. <br/>
       </h3>
       
       <h2>Visita Nuestras Redes</h2>

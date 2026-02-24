@@ -34,7 +34,7 @@ const DefaultList = () => {
   const { activeCategory } = useMain()
 
   const CATEGORIES_CONFIG = [
-    { key: CATEGORY.POPULAR, title: 'Lo Más Vendido' },
+    { key: CATEGORY.POPULAR, title: 'Lo Más Pedido' },
     { key: CATEGORY.CLASSIC, title: `Emolientes ${CATEGORY.CLASSIC}` },
     { key: CATEGORY.SPECIAL, title: `Emolientes ${CATEGORY.SPECIAL}` },
     { key: CATEGORY.MEDICINAL, title: `Emolientes ${CATEGORY.MEDICINAL}` }

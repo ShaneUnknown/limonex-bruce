@@ -11,8 +11,8 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --footer-bg: #e6e6e6;
-    --footer-h2-bg: #c1c1c1;
+    --footer-bg: #eeeeee;
+    --footer-h2-bg: #cecece;
     --footer-h2-color: #434343;
     --footer-h2-shadow: none;
     --footer-border-color: #0003;
